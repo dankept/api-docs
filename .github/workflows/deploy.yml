@@ -1,0 +1,38 @@
+name: deploy api docs
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: docker build . -t ${{ secrets.REGISTRY_RPO }}:${{ github.sha }}
+
+      - name: Push image to docker registry
+        run: |
+          sudo docker login --username=${{ secrets.ID }} --password ${{ secrets.PASSWORD }} ${{ secrets.REGISTRY }}
+          sudo docker tag $(docker images ${{ secrets.REGISTRY_RPO }}:${{ github.sha }} -q) ${{ secrets.REGISTRY_RPO }}:latest
+          sudo docker push ${{ secrets.REGISTRY_RPO }}:latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            sudo docker stop $(docker ps --filter ancestor=${{ secrets.REGISTRY_RPO }} -q)
+            sudo docker rm -f $(docker ps -a --filter ancestor=${{ secrets.REGISTRY_RPO }}:latest -q)
+            sudo docker rmi -f $(docker images  ${{ secrets.REGISTRY_RPO }}:latest -q)
+            sudo docker login --username=${{ secrets.ID }} --password=${{ secrets.PASSWORD }} ${{ secrets.REGISTRY }}
+            sudo docker pull ${{ secrets.REGISTRY_RPO }}:latest
+            sudo docker run -d -p 8001:3000 ${{ secrets.REGISTRY_RPO }}:latest
