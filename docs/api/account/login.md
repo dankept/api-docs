@@ -5,7 +5,7 @@
 ### 请求方式
 
 ```http
-POST /api/v1/login HTTP/1.1
+POST /api/v1/account/login HTTP/1.1
 ```
 
 ### 请求头
@@ -40,12 +40,17 @@ Content-Type: application/json
 ```json
 {
     "data": {
-        "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTEzMjM2MjIsIm5iZiI6MTYxMTMyMzYyMiwianRpIjoiOGUyMDhhNmUtYzRmNS00NmI5LTk0YjgtMTZlYmE3YzQyNmJkIiwiZXhwIjoxNjExMzI3MjIyLCJpZGVudGl0eSI6eyJlbWFpbCI6Ijg0NzI2NzUwN0BxcS5jb20iLCJpc19hZG1pbiI6ZmFsc2UsImlzX3N1cGVyIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImVtYWlsIjoiODQ3MjY3NTA3QHFxLmNvbSIsImlzX2FkbWluIjpmYWxzZSwiaXNfc3VwZXIiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlfX0.0NXsXxrud5iGyy1Ddumdl3BGJfQSRfig44H9nI5ImEU",
-        "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTEzMjM2MjIsIm5iZiI6MTYxMTMyMzYyMiwianRpIjoiODY2YjExOWUtNzBjMi00MzE4LTgxZTUtYWJhNGUzOWVhMjlhIiwiZXhwIjoxNjEzOTE1NjIyLCJpZGVudGl0eSI6Ijg0NzI2NzUwN0BxcS5jb20iLCJ0eXBlIjoicmVmcmVzaCJ9.OWk2keo_Fn53Rw4iEq-fjmTpI4Pm6q_ImCIKjOqXtAk"
+        "email": "847267507@qq.com",
+        "id": 2,
+        "name": "宁 · 致",
+        "token": {
+            "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTIwMDM4MjUsIm5iZiI6MTYxMjAwMzgyNSwianRpIjoiYzJmNzYyMGEtNTcyYy00NjQ0LTlhZmItMzIxOTc5YjUzYjllIiwiZXhwIjoxNjEyMDA3NDI1LCJpZGVudGl0eSI6eyJlbWFpbCI6Ijg0NzI2NzUwN0BxcS5jb20iLCJzdGF0dXMiOnRydWUsImlzX2FkbWluIjpmYWxzZSwiaXNfc3VwZXIiOmZhbHNlfSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiZW1haWwiOiI4NDcyNjc1MDdAcXEuY29tIiwic3RhdHVzIjp0cnVlLCJpc19hZG1pbiI6ZmFsc2UsImlzX3N1cGVyIjpmYWxzZX19.AaxOxw7cTmS1Ym9o4qnlU-_Oo9Ydz8HQFL7dIutbOHQ",
+            "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTIwMDM4MjUsIm5iZiI6MTYxMjAwMzgyNSwianRpIjoiNjFhM2Q4N2UtZTk5MC00ODI0LTkxNGItYzU4YWYxZGY4N2MyIiwiZXhwIjoxNjE0NTk1ODI1LCJpZGVudGl0eSI6Ijg0NzI2NzUwN0BxcS5jb20iLCJ0eXBlIjoicmVmcmVzaCJ9.yo37NmohxHKtBmkvLWoI8kB5aBJDirhTv3cyvj-F_rs"
+        }
     },
     "error_code": 0,
     "message": "登录成功.",
-    "request": "POST /api/v1/login",
+    "request": "POST /api/v1/account/login",
     "status": "success"
 }
 ```
