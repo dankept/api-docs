@@ -26,11 +26,16 @@
     * [添加管理员](/api/permission/add)
     * [删除管理员](/api/permission/delete)
 
+* 日志管理
+    
+    * [客户端连接日志](/api/logger/device)
+    <!-- * [Bug](/api/logger/bug) -->
 
-<!-- * 日志管理
-    * [Bug](/api/logger/bug) -->
+* 其它
 
-
+    * [TCP服务连接](/api/other/server)
+    * [自定义状态码](/api/other/code)
+    
 <!-- * 设备管理
     * [添加设备](/)
     * [删除设备](/)
