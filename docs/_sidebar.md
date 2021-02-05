@@ -31,15 +31,14 @@
     * [客户端连接日志](/api/logger/device)
     <!-- * [Bug](/api/logger/bug) -->
 
+* 设备管理
+    * [获取设备状态](/api/device/status)
+    * [向设备发送消息](/api/device/cmd)
+
 * 其它
 
     * [TCP服务连接](/api/other/server)
     * [自定义状态码](/api/other/code)
-    
-<!-- * 设备管理
-    * [添加设备](/)
-    * [删除设备](/)
-    * [获取设备列表](/)  -->
 
 * 部署
  
