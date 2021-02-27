@@ -22,9 +22,10 @@
 * 权限管理
 
     * [获取个人权限信息](/api/permission/info)
-    * [获取系统所有的管理员](/api/permission/query)
-    * [添加管理员](/api/permission/add)
-    * [删除管理员](/api/permission/delete)
+    * [获取用户列表(更新)](/api/permission/user_list)
+    * [获取系统管理员列表(更新)](/api/permission/query)
+    * [添加管理员(更新)](/api/permission/add)
+    * [删除管理员(更新)](/api/permission/delete)
 
 * 日志管理
     

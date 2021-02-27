@@ -24,7 +24,7 @@ Authorization: access_token
 ```json
 {
     "type": "phone",
-    "identity": "18407678745"
+    "identity": "184****8745"
 }
 ```
 

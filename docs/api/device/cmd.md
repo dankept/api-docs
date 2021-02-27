@@ -2,7 +2,7 @@
 
 !> 当前接口将会支持`HTTP`与`Websocket`两种方式。
 
-!> 当前接口采用`HTTP`请求方式。可采用轮询方式定时刷新数据。
+!> 当前接口采用`HTTP`请求方式。
 
 !> 当前接口数据可能在后期会发生改变。
 
@@ -33,8 +33,8 @@ Content-Type: application/json
 
     |**字段**|**类型**|**说明**|
     |-------|:------:|-------|
-    |<div style="color:#42b983;">ip</div>   |*Integer* |【必填】IP地址|
-    |<div style="color:#42b983;">msg</div>  |*Integer* |【必填】将要发送的消息，最大长度不超过 256 个字符|
+    |<div style="color:#42b983;">ip</div>   |*String* |【必填】IP地址|
+    |<div style="color:#42b983;">msg</div>  |*String* |【必填】将要发送的消息，最大长度不超过 256 个字符|
 
 ### 响应数据
 
